@@ -1,0 +1,5 @@
+# Ignore vendor dependencies
+/vendor/**/*
+
+# Ignore Composer package
+/composer.phar

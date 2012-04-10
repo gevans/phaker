@@ -1,0 +1,11 @@
+{
+    "hash": "dc0b938f82c06ed8b501ac2dffaefc0a",
+    "packages": [
+        {
+            "package": "symfony/yaml",
+            "version": "dev-master",
+            "source-reference": "0647ee4ca69b60f9043256e89f8dbaa0cedd854c"
+        }
+    ],
+    "aliases": []
+}
