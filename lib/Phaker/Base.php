@@ -176,7 +176,8 @@ class Base {
 		}
 		else
 		{
-			// throw shit and flip tables
+			// No method, alias, or translation available
+			throw new NoMethodError($key, get_class($this));
 		}
 	}
 

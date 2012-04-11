@@ -5,7 +5,8 @@ namespace Phaker\Generator;
 /**
  * Name generator.
  *
- * @package  Phaker
+ * @package   Phaker
+ * @category  Generators
  */
 class Name extends \Phaker {
 
