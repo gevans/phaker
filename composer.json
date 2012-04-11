@@ -1,7 +1,7 @@
 {
   "name": "gevans/phaker",
   "type": "library",
-  "description": "",
+  "description": "Phaker generates fake data for unit testing and populating your database",
   "keywords": ["random", "fake", "data", "unit", "testing", "generation", "library", "tdd", "bdd"],
   "homepage": "https://github.com/gevans/phaker",
   "license": "MIT",
@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Phaker": "lib/"
+      "Phaker": "lib"
     }
   }
 }
