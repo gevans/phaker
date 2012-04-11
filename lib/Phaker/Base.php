@@ -14,6 +14,12 @@ class Base {
 	const ULETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	const LETTERS  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
+	public static function class_name_for_generator($generator)
+	{
+		$class = array_map('ucfirst', explode('_', $generator));
+		return 'Phaker\\Generator\\'.implode('_', $class);
+	}
+
 	/**
 	 *
 	 *     echo Phaker::factory('name')->first_name;
@@ -21,10 +27,10 @@ class Base {
 	 * @param  [type] $generator [description]
 	 * @return [type]
 	 */
-	public static function factory($class)
+	public static function factory($generator)
 	{
-		$generator = 'Phaker\\Generator\\'.$class;
-		return new $generator;
+		$class = static::class_name_for_generator($generator);
+		return new $class;
 	}
 
 	/**
@@ -35,10 +41,10 @@ class Base {
 	 * @param  [type] $args      [description]
 	 * @return [type]
 	 */
-	public static function __callStatic($class, $args)
+	public static function __callStatic($generator, $args)
 	{
-		$generator = 'Phaker\\Generator\\'.$class;
-		return new $generator;
+		$class = static::class_name_for_generator($generator);
+		return new $class;
 	}
 
 	public static function rand($min = 0, $max = 1)
