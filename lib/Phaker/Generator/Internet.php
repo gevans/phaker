@@ -125,7 +125,7 @@ class Internet extends \Phaker {
 
 		$container = array();
 
-		for ($i=0; $i < 7; $i++) {
+		for ($i=0; $i < 8; $i++) {
 			$container[] = static::$_ip_v6_space[array_rand(static::$_ip_v6_space)];
 		}
 
