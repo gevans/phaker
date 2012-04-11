@@ -11,6 +11,7 @@ use Symfony\Component\Yaml\Yaml;
  * @copyright  (c) 2007-2011 Kohana Team
  * @license    http://kohanaframework.org/license
  * @package    Phaker
+ * @category   Helpers
  */
 class I18n {
 
@@ -82,9 +83,9 @@ class I18n {
 
 			if (file_exists($file))
 			{
-				// Append, preventing less specific language
-				// files from overloading more specific files
+				// Load and parse YAML-formatted file
 				$yaml  = Yaml::parse($file);
+				// Recursively merge language with table
 				$table = Util::array_merge($table, $yaml[implode('-', $parts)]);
 			}
 

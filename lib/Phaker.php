@@ -4,6 +4,7 @@ use Phaker\I18n;
 
 /**
  *
+ * @package  Phaker
  */
 class Phaker {
 
@@ -155,6 +156,9 @@ class Phaker {
 
 	protected $_flexible_key;
 
+	/**
+	 * @var  array  Method aliases
+	 */
 	protected $_aliases = array();
 
 	public function __get($key)

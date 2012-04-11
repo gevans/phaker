@@ -3,18 +3,26 @@
 namespace Phaker\Generator;
 
 /**
+ * Company generator.
  *
- * @package  Phaker
+ * @package   Phaker
+ * @category  Generators
  */
 class Company extends \Phaker {
 
 	protected $_flexible_key = 'company';
 
+	/**
+	 * @return  string
+	 */
 	public function name()
 	{
 		return static::parse('company.name');
 	}
 
+	/**
+	 * @return  string
+	 */
 	public function suffix()
 	{
 		return static::fetch('company.suffix');

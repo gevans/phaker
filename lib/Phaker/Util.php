@@ -9,6 +9,7 @@ namespace Phaker;
  * @copyright  (c) 2007-2011 Kohana Team
  * @license    http://kohanaframework.org/license
  * @package    Phaker
+ * @category   Helpers
  */
 class Util {
 

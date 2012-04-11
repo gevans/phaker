@@ -3,6 +3,7 @@
 namespace Phaker\Generator;
 
 /**
+ * Name generator.
  *
  * @package  Phaker
  */
@@ -10,26 +11,41 @@ class Name extends \Phaker {
 
 	protected $_flexible_key = 'name';
 
+	/**
+	 * @return  string
+	 */
 	public function name()
 	{
 		return static::parse('name.name');
 	}
 
+	/**
+	 * @return  string
+	 */
 	public function first_name()
 	{
 		return static::fetch('name.first_name');
 	}
 
+	/**
+	 * @return  string
+	 */
 	public function last_name()
 	{
 		return static::fetch('name.last_name');
 	}
 
+	/**
+	 * @return  string
+	 */
 	public function prefix()
 	{
 		return static::fetch('name.prefix');
 	}
 
+	/**
+	 * @return  string
+	 */
 	public function suffix()
 	{
 		return static::fetch('name.suffix');
@@ -40,7 +56,7 @@ class Name extends \Phaker {
 	 *
 	 * Wordlist from http://www.bullshitjob.com/title/
 	 *
-	 * @return [type]
+	 * @return  string
 	 */
 	public function title()
 	{

@@ -3,16 +3,24 @@
 namespace Phaker\Generator;
 
 /**
+ * Phone number generator.
  *
- * @package  Phaker
+ * @package   Phaker
+ * @category  Generators
  */
 class Phone_Number extends \Phaker {
 
+	/**
+	 * @return  string
+	 */
 	public function phone_number()
 	{
 		return static::numerify(static::fetch('phone_number.formats'));
 	}
 
+	/**
+	 * @return  string
+	 */
 	public function cell_number()
 	{
 		$translation = static::translate('faker.cell_phone');

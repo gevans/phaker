@@ -3,11 +3,17 @@
 namespace Phaker\Generator;
 
 /**
+ * Lorem Ipsum generator.
  *
- * @package  Phaker
+ * @package   Phaker
+ * @category  Generators
  */
 class Lorem extends \Phaker {
 
+	/**
+	 *
+	 * @return  array
+	 */
 	public function words($num = 3, $supplemental = FALSE)
 	{
 		$words = static::translate('faker.lorem.words') +
@@ -16,6 +22,10 @@ class Lorem extends \Phaker {
 		return array_slice($words, 0, $num);
 	}
 
+	/**
+	 *
+	 * @return  string
+	 */
 	public function characters($char_count = 255)
 	{
 		$chars  = \Phaker::NUMBERS.\Phaker::ULETTERS;
@@ -30,11 +40,19 @@ class Lorem extends \Phaker {
 		return strtolower($string);
 	}
 
+	/**
+	 *
+	 * @return  string
+	 */
 	public function sentence($word_count = 4, $supplemental = FALSE)
 	{
 		return ucfirst(implode(' ', $this->words($word_count + mt_rand(0, 6), $supplemental))).'.';
 	}
 
+	/**
+	 *
+	 * @return  array
+	 */
 	public function sentences($sentence_count = 3, $supplemental = FALSE)
 	{
 		$sentences = array();
@@ -45,11 +63,19 @@ class Lorem extends \Phaker {
 		return $sentences;
 	}
 
+	/**
+	 *
+	 * @return  string
+	 */
 	public function paragraph($sentence_count = 3, $supplemental = FALSE)
 	{
 		return implode(' ', $this->sentences($sentence_count + mt_rand(0, 3), $supplemental));
 	}
 
+	/**
+	 *
+	 * @return  array
+	 */
 	public function paragraphs($paragraph_count = 3, $supplemental = FALSE)
 	{
 		$paragraphs = array();
