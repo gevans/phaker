@@ -84,7 +84,7 @@ class I18n {
 			if (file_exists($file))
 			{
 				// Load and parse YAML-formatted file
-				$yaml  = Yaml::parse($file);
+				$yaml  = Yaml::parse(file_get_contents($file));
 				// Recursively merge language with table
 				$table = Util::array_merge($table, $yaml[implode('-', $parts)]);
 			}
